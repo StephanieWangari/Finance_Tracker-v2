@@ -1,5 +1,13 @@
 import "./MetricCard.css";
 
+const currency= localStorage.getItem("currency") || "USD";
+
+let prefix = ""
+
+if (currency == "USD") {
+  prefix = 'KES'
+}
+
 export default function MetricCard({ title, value, trend, trendLabel, icon, accent = "indigo" }) {
   const isPositive = trend >= 0;
 

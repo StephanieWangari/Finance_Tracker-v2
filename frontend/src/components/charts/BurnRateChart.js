@@ -33,8 +33,8 @@ export default function BurnRateChart({ transactions, budgetLimit = 3000 }) {
       <ResponsiveContainer width="100%" height={260}>
         <LineChart data={monthlyData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-          <XAxis dataKey="month" tick={{ fill: "#64748b", fontSize: 11 }} axisLine={false} tickLine={false} />
-          <YAxis tick={{ fill: "#64748b", fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={(v) => `$${v}`} />
+          <XAxis dataKey="month" tick={{ fill: "#ffffff", fontSize: 11 }} axisLine={false} tickLine={false} />
+          <YAxis tick={{ fill: "#fbfcfd", fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={(v) => `$${v}`} />
           <Tooltip content={<CustomTooltip />} />
           <Legend wrapperStyle={{ fontSize: "12px", color: "#94a3b8", paddingTop: "12px" }} />
           <ReferenceLine y={budgetLimit} stroke="#f43f5e" strokeDasharray="6 3" label={{ value: "Limit", fill: "#f43f5e", fontSize: 11 }} />

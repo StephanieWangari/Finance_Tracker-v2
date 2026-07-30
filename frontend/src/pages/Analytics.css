@@ -19,7 +19,8 @@
 
 .analytics__subtitle {
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--text-primary);
+  /* color: var(--indigo); */
 }
 
 .analytics__filters {
@@ -79,7 +80,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: var(--text-muted);
+  color: var(--text-primary);
 }
 
 .analytics__summary-value {

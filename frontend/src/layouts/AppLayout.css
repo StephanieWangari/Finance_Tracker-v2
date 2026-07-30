@@ -1,7 +1,8 @@
 .app-layout {
   display: flex;
   min-height: 100vh;
-  background: var(--bg-base);
+  background: var(--indigo-dim);
+  /* background-color: #000000; */
 }
 
 .app-layout__main {

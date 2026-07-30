@@ -1,4 +1,6 @@
-.dashboard { max-width: 1200px; }
+.dashboard { max-width: 1200px;
+/* background-color: rgb(231, 221, 221); */
+}
 
 .dashboard__page-header {
   display: flex;
@@ -11,6 +13,7 @@
   font-size: 22px;
   font-weight: 700;
   color: var(--text-primary);
+  /* color: var(--indigo); */
   letter-spacing: -0.4px;
   margin-bottom: 4px;
 }
@@ -18,6 +21,7 @@
 .dashboard__subtitle {
   font-size: 13px;
   color: var(--text-muted);
+  /* color: var(--indigo); */
 }
 
 .dashboard__add-btn {

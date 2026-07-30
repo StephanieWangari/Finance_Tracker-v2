@@ -13,8 +13,9 @@ export default function Dashboard() {
   const [error, setError] = useState(null);
   const [form, setForm] = useState({ amount: "", type: "expense", category: "General" });
   const [submitting, setSubmitting] = useState(false);
+  const [currency, setCurrency] = useState(() => localStorage.getItem("currency") || "USD");
 
-  const CATEGORIES = ["General", "Food", "Transport", "Housing", "Health", "Entertainment", "Savings", "Other"];
+  const CATEGORIES = ["General", "Food", "Transport", "Housing", "Health", "Entertainment", "Savings", "Rent" , "Uber" , "Other"];
 
   const fetchTransactions = useCallback(async () => {
     try {
