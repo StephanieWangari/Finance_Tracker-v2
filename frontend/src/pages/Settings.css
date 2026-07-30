@@ -1,0 +1,206 @@
+.settings { max-width: 900px; }
+
+.settings__header {
+  margin-bottom: 28px;
+}
+
+.settings__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+
+.settings__subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.settings__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.settings__card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.settings__card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings__card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.settings__card-icon--indigo { background: var(--indigo-dim); color: var(--indigo); }
+.settings__card-icon--emerald { background: var(--emerald-dim); color: var(--emerald); }
+
+.settings__card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.settings__card-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.settings__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings__label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.settings__input-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.settings__prefix {
+  position: absolute;
+  left: 14px;
+  font-size: 14px;
+  color: var(--text-muted);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.settings__hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.settings__save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px;
+  background: var(--indigo);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+  margin-top: 4px;
+}
+
+.settings__save-btn:hover { background: var(--indigo-hover); box-shadow: var(--shadow-glow); }
+
+.settings__save-btn--saved {
+  background: var(--emerald);
+}
+
+.settings__save-btn--saved:hover { background: var(--emerald); box-shadow: none; }
+
+/* Category Management */
+.settings__category-add {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.settings__category-add input { flex: 1; }
+
+.settings__add-cat-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--indigo-dim);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: var(--indigo-hover);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.settings__add-cat-btn:hover {
+  background: var(--indigo);
+  color: #fff;
+}
+
+.settings__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.settings__category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.settings__category-tag:hover {
+  border-color: var(--border-light);
+  color: var(--text-primary);
+}
+
+.settings__cat-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.settings__cat-remove:hover {
+  background: var(--rose-dim);
+  color: var(--rose);
+}
+
+@media (max-width: 768px) {
+  .settings__grid { grid-template-columns: 1fr; }
+}

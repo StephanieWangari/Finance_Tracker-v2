@@ -1,0 +1,87 @@
+.metric-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.metric-card--indigo::before { background: var(--indigo); }
+.metric-card--emerald::before { background: var(--emerald); }
+.metric-card--rose::before { background: var(--rose); }
+.metric-card--amber::before { background: var(--amber); }
+
+.metric-card:hover {
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.metric-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.metric-card__title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+}
+
+.metric-card__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-card__icon--indigo { background: var(--indigo-dim); color: var(--indigo); }
+.metric-card__icon--emerald { background: var(--emerald-dim); color: var(--emerald); }
+.metric-card__icon--rose { background: var(--rose-dim); color: var(--rose); }
+.metric-card__icon--amber { background: var(--amber-dim); color: var(--amber); }
+
+.metric-card__value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.metric-card__trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.metric-card__trend--up {
+  background: var(--emerald-dim);
+  color: var(--emerald);
+}
+
+.metric-card__trend--down {
+  background: var(--rose-dim);
+  color: var(--rose);
+}

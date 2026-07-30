@@ -1,0 +1,117 @@
+.analytics { max-width: 1200px; }
+
+.analytics__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.analytics__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+
+.analytics__subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.analytics__filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.analytics__filter-btn {
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.analytics__filter-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+
+.analytics__filter-btn--active {
+  background: var(--indigo-dim);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: var(--indigo-hover);
+}
+
+.analytics__summary {
+  display: flex;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 28px;
+  margin-bottom: 20px;
+  gap: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.analytics__summary-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 24px;
+}
+
+.analytics__summary-item:first-child { padding-left: 0; }
+.analytics__summary-item:last-child { padding-right: 0; }
+
+.analytics__summary-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+}
+
+.analytics__summary-value {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.analytics__summary-item--income .analytics__summary-value { color: var(--emerald); }
+.analytics__summary-item--expense .analytics__summary-value { color: var(--rose); }
+
+.analytics__summary-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.analytics__charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.analytics__chart-full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .analytics__charts-grid { grid-template-columns: 1fr; }
+  .analytics__chart-full { grid-column: auto; }
+  .analytics__summary { flex-direction: column; gap: 16px; }
+  .analytics__summary-divider { width: 100%; height: 1px; }
+  .analytics__summary-item { padding: 0; }
+}
